@@ -1,1 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#eef1f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14181a" media="(prefers-color-scheme: dark)">
+<title>Eternal Rock — Lesson 10 Prayer 2</title>
+<meta name="description" content="Eternal Rock International Ministries — listen to \"Lesson 10 Prayer 2\" on your platform of choice.">
+
+<meta property="og:title" content="Eternal Rock — Lesson 10 Prayer 2">
+<meta property="og:description" content="Listen to \"Lesson 10 Prayer 2\" wherever you already listen.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Public+Sans:wght@400;500;600;700&family=Overpass+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================
+     Eternal Rock — EN, edición "moderna": portada centrada
+     sobre malla degradada tipo amanecer, botones estilizados
+     por plataforma, mobile-first.
+     CUSTOMIZE: the .cover (drop in a real <img>), and every
+     href="#" in the platform list.
+     ========================================================== */
+
+  :root{
+    --bg-1:#eef2f1;
+    --bg-2:#e2e9e7;
+    --glow-1:#d9b98f;
+    --glow-2:#9db8bd;
+    --surface:rgba(255,255,255,0.75);
+    --surface-border:rgba(255,255,255,0.9);
+    --ink:#182022;
+    --ink-muted:#5f6968;
+    --line:rgba(24,32,34,0.1);
+    --accent:#2f6066;
+    --accent-2:#3c7d84;
+    --focus:#2f6066;
+
+    --font-display:'Big Shoulders Display', 'Arial Narrow', sans-serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono:'Overpass Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg-1:#12171a;
+      --bg-2:#161c1a;
+      --glow-1:#3c2f22;
+      --glow-2:#1f3a3d;
+      --surface:rgba(255,255,255,0.06);
+      --surface-border:rgba(255,255,255,0.12);
+      --ink:#e7ebe8;
+      --ink-muted:#93a09d;
+      --line:rgba(255,255,255,0.1);
+      --accent:#6fb3ba;
+      --accent-2:#5aa0a8;
+      --focus:#6fb3ba;
+    }
+  }
+
+  :root[data-theme="dark"]{
+    --bg-1:#12171a;
+    --bg-2:#161c1a;
+    --glow-1:#3c2f22;
+    --glow-2:#1f3a3d;
+    --surface:rgba(255,255,255,0.06);
+    --surface-border:rgba(255,255,255,0.12);
+    --ink:#e7ebe8;
+    --ink-muted:#93a09d;
+    --line:rgba(255,255,255,0.1);
+    --accent:#6fb3ba;
+    --accent-2:#5aa0a8;
+    --focus:#6fb3ba;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(55% 42% at 12% 0%, var(--glow-1) 0%, transparent 60%),
+      radial-gradient(55% 40% at 100% 18%, var(--glow-2) 0%, transparent 60%),
+      linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    color:var(--ink);
+    font-family:var(--font-body);
+    display:flex;
+    justify-content:center;
+  }
+
+  a{ color:inherit; }
+
+  :focus-visible{
+    outline:2px solid var(--focus);
+    outline-offset:2px;
+  }
+
+  .page{
+    width:100%;
+    max-width:440px;
+    min-height:100vh;
+    padding:0 18px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* ---------------- Centered cover ---------------- */
+  .hero{
+    padding:48px 4px 8px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    opacity:0;
+    animation:rise .7s cubic-bezier(.22,.9,.32,1) .05s forwards;
+  }
+
+  .cover{
+    width:132px;
+    height:132px;
+    border-radius:30px;
+    background:linear-gradient(150deg, #e8a765 0%, #4a3f66 55%, #1c2947 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 18px 34px -14px rgba(20,30,40,0.45);
+    animation:cover-breathe 6s ease-in-out infinite;
+    object-fit:cover; /* in case .cover becomes an <img> */
+  }
+
+  /* Replace with: <img class="cover" src="your-cover.jpg" alt="Eternal Rock"> */
+  .cover svg{ width:54px; height:54px; }
+
+  @keyframes cover-breathe{
+    0%,100%{ transform:scale(1); box-shadow:0 18px 34px -14px rgba(20,30,40,0.45); }
+    50%{ transform:scale(1.025); box-shadow:0 22px 40px -14px rgba(20,30,40,0.55); }
+  }
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--ink-muted);
+    margin:20px 0 4px;
+  }
+
+  .mark{
+    margin:0;
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(34px, 10vw, 42px);
+    line-height:0.95;
+    letter-spacing:0.01em;
+    text-transform:uppercase;
+    text-wrap:balance;
+  }
+
+  .tagline{
+    margin:12px 0 0;
+    max-width:300px;
+    font-size:13.5px;
+    line-height:1.6;
+    color:var(--ink-muted);
+  }
+
+  /* ---------------- Platform buttons ---------------- */
+  .platforms-wrap{
+    margin-top:30px;
+    padding-bottom:28px;
+  }
+
+  .section-label{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--ink-muted);
+    margin:0 0 14px;
+    text-align:center;
+  }
+
+  .platforms{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .btn{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    width:100%;
+    min-height:60px;
+    padding:9px 14px;
+    background:var(--surface);
+    border:1px solid var(--surface-border);
+    border-radius:16px;
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    text-decoration:none;
+    color:var(--ink);
+    box-shadow:0 6px 16px -12px rgba(10,20,20,0.3);
+    transition:transform .18s cubic-bezier(.22,.9,.32,1), box-shadow .18s ease, border-color .18s ease;
+    opacity:0;
+    animation:rise .55s cubic-bezier(.22,.9,.32,1) forwards;
+  }
+
+  .platforms .btn:nth-child(1){ animation-delay:.28s; }
+  .platforms .btn:nth-child(2){ animation-delay:.33s; }
+  .platforms .btn:nth-child(3){ animation-delay:.38s; }
+  .platforms .btn:nth-child(4){ animation-delay:.43s; }
+  .platforms .btn:nth-child(5){ animation-delay:.48s; }
+  .platforms .btn:nth-child(6){ animation-delay:.53s; }
+  .platforms .btn:nth-child(7){ animation-delay:.58s; }
+  .platforms .btn:nth-child(8){ animation-delay:.63s; }
+
+  @keyframes rise{
+    from{ opacity:0; transform:translateY(10px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  .btn:hover{
+    transform:translateY(-2px);
+    border-color:var(--accent);
+    box-shadow:0 12px 24px -14px rgba(10,20,20,0.4);
+  }
+  .btn:active{ transform:translateY(0) scale(0.98); }
+
+  .icon{
+    flex-shrink:0;
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+  }
+
+  .icon svg{
+    width:21px;
+    height:21px;
+  }
+
+  .btn-text{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:1px;
+  }
+
+  .btn-name{
+    font-size:15px;
+    font-weight:600;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .btn-sub{
+    font-family:var(--font-mono);
+    font-size:10px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-muted);
+  }
+
+  .btn-go{
+    flex-shrink:0;
+    color:var(--ink-muted);
+    font-size:15px;
+    transition:transform .18s cubic-bezier(.22,.9,.32,1);
+  }
+  .btn:hover .btn-go{ transform:translateX(3px); }
+
+  .ic-spotify{ background:#1DB954; }
+  .ic-apple{ background:linear-gradient(160deg,#a95cf0,#7b3ee0); }
+  .ic-pocketcasts{ background:#F43E37; }
+  .ic-amazon{ background:#00A8E1; }
+  .ic-castbox{ background:#F97D2B; }
+  .ic-goodpods{ background:#FFC94D; color:#4a3200; }
+  .ic-iheart{ background:#C6002B; }
+
+
+  /* ---------------- Footer ---------------- */
+  footer{
+    text-align:center;
+    padding:8px 8px calc(30px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .social{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:16px;
+  }
+
+  .social a{
+    color:var(--ink-muted);
+    text-decoration:none;
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+  }
+
+  .social a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  .fine-print{
+    margin:0;
+    font-size:11px;
+    color:var(--ink-muted);
+    line-height:1.7;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .hero, .btn, .cover{ animation:none !important; opacity:1; }
+    .btn{ transition:none; }
+    .btn:hover{ transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hero">
+    <img class="cover" src="lesson-10-prayer.jpg" alt="Eternal Rock — Lesson 10 Prayer 2">
+    <p class="eyebrow">International Ministries</p>
+    <h1 class="mark">Lesson 10 Prayer 2</h1>
+    <p class="tagline">Weekly sermons to strengthen your faith, wherever you already listen.</p>
+  </header>
+
+  <div class="platforms-wrap">
+    <p class="section-label">Choose your platform</p>
+
+    <div class="platforms">
+
+      <a class="btn" data-link="spotify" href="#" target="_blank" rel="noopener">
+        <span class="icon ic-spotify" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M5 15.5c4.5-2 9.5-2 14 0"/><path d="M6.2 11.8c3.8-1.7 7.8-1.7 11.6 0"/><path d="M7.4 8.2c3.1-1.3 6.1-1.3 9.2 0"/></svg></span>
+        <span class="btn-text">
+          <span class="btn-name">Spotify</span>
+          <span class="btn-sub">Listen</span>
+        </span>
+        <span class="btn-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="btn" data-link="apple" href="#" target="_blank" rel="noopener">
+        <span class="icon ic-apple" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M16.5 12.3c0-2.4 2-3.6 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1.9-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.6-.9 1-1.7 1.4-2.7-1.7-.7-2.7-2.4-2.7-3.9V12.3ZM14.1 5.4c.7-.8 1.1-2 1-3.1-1 .1-2.1.7-2.8 1.5-.6.7-1.1 1.9-1 3 1.1.1 2.2-.6 2.8-1.4Z"/></svg></span>
+        <span class="btn-text">
+          <span class="btn-name">Apple Podcasts</span>
+          <span class="btn-sub">Listen</span>
+        </span>
+        <span class="btn-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="btn" data-link="pocketcasts" href="https://pca.st/fs6abkl6" target="_blank" rel="noopener">
+        <span class="icon ic-pocketcasts" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M9 7.5v9l7.5-4.5L9 7.5Z"/></svg></span>
+        <span class="btn-text">
+          <span class="btn-name">Pocket Casts</span>
+          <span class="btn-sub">Listen</span>
+        </span>
+        <span class="btn-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="btn" data-link="amazon" href="#" target="_blank" rel="noopener">
+        <span class="icon ic-amazon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4.5 14.5c3.5 3 11.5 3 15 0"/><path d="M17 13.3l2.5 1.2-1 2.6"/></svg></span>
+        <span class="btn-text">
+          <span class="btn-name">Amazon Music</span>
+          <span class="btn-sub">Listen</span>
+        </span>
+        <span class="btn-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="btn" data-link="castbox" href="#" target="_blank" rel="noopener">
+        <span class="icon ic-castbox" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14v-2a7 7 0 0 1 14 0v2"/><rect x="3.5" y="14" width="3.4" height="5" rx="1.3"/><rect x="17.1" y="14" width="3.4" height="5" rx="1.3"/></svg></span>
+        <span class="btn-text">
+          <span class="btn-name">Castbox</span>
+          <span class="btn-sub">Listen</span>
+        </span>
+        <span class="btn-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="btn" data-link="goodpods" href="#" target="_blank" rel="noopener">
+        <span class="icon ic-goodpods" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#4a3200" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5h16v9H9l-3.5 3v-3H4v-9Z"/><path d="M10.5 9.2v3.6l3-1.8-3-1.8Z" fill="#4a3200" stroke="none"/></svg></span>
+        <span class="btn-text">
+          <span class="btn-name">Goodpods</span>
+          <span class="btn-sub">Listen</span>
+        </span>
+        <span class="btn-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="btn" data-link="iheart" href="#" target="_blank" rel="noopener">
+        <span class="icon ic-iheart" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 20.2s-7.6-4.6-9.8-9C.8 7.9 2 4.6 5 3.6c2-.7 4 .1 5.2 1.9L12 8l1.8-2.5c1.2-1.8 3.2-2.6 5.2-1.9 3 1 4.2 4.3 2.8 7.6-2.2 4.4-9.8 9-9.8 9Z"/></svg></span>
+        <span class="btn-text">
+          <span class="btn-name">iHeartRadio</span>
+          <span class="btn-sub">Listen</span>
+        </span>
+        <span class="btn-go" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="social">
+      <a data-link="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+      <a data-link="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+      <a data-link="youtube" href="#" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <p class="fine-print">Distributed with Spotify for Podcasters<br>© <span id="year"></span> Eternal Rock International Ministries</p>
+  </footer>
+
+</div>
+
+<script>
+  /* ============================================================
+     EDIT YOUR LINKS HERE — this is the only part you need to
+     touch to change where each button points. Leave "" on any
+     you don't have yet: that button stays inert (#) until you
+     add a real link.
+     ============================================================ */
+  const LINKS = {
+    spotify:     "https://open.spotify.com/episode/4st8IYVc6GV3UJqt2Q1kVw?si=hJpyx6iyRtmx-rSUyG72Cw",
+    apple:       "https://podcasts.apple.com/us/podcast/lesson-10-prayer-2/id6804847136?i=1000786537205",
+    pocketcasts: "https://pca.st/yodggj13",
+    amazon:      "https://music.amazon.com/podcasts/4861b560-597d-46b0-8fda-04915ec118a0/episodes/affea21e-50f5-45d8-96f9-2f00175f0377/eternal-rock-im-lesson-10-prayer-2",
+    castbox:     "https://castbox.fm/vi/989623493",
+    goodpods:    "",
+    iheart:      "https://www.iheart.com/podcast/269-eternal-rock-im-342246444/episode/lesson-10-prayer-2-342586155",
+    instagram:   "https://www.instagram.com/eternalrockim/",
+    facebook:    "https://www.facebook.com/EtRoInMinistries/",
+    youtube:     "https://www.youtube.com/@InternationalEternalRock"
+  };
+
+  document.querySelectorAll('[data-link]').forEach(el => {
+    const url = LINKS[el.dataset.link];
+    if (url) el.href = url;
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
 
