@@ -292,8 +292,11 @@
     <p class="tagline">Weekly sermons to strengthen your faith, wherever you already listen.</p>
   </header>
 
-  <p class="list-label">Episodes</p>
-  <div class="episodes" id="episode-list"></div>
+  <p class="list-label">Lessons</p>
+  <div class="episodes" id="lesson-list"></div>
+
+  <p class="list-label">Sermons</p>
+  <div class="episodes" id="sermon-list"></div>
 
   <footer>
     <div class="socials">
@@ -313,17 +316,27 @@
 </div>
 
 <script>
-  // Newest episode goes FIRST in this list. To add a new episode:
+  // ---- LESSONS ----
+  // Add lessons in ANY order — they're automatically sorted by "number"
+  // below, so you never have to find the right spot in the list.
+  // To add a new lesson:
   // 1. Duplicate the "_plantilla-episodio" folder, rename it to a short
-  //    URL-friendly slug (e.g. "faith-over-fear"), fill in its cover,
+  //    URL-friendly slug (e.g. "lesson-11-faith"), fill in its cover,
   //    title and platform links.
-  // 2. Add one entry below pointing "slug" at that folder's name.
-  const EPISODES = [
+  // 2. Add one entry below with that folder's name and lesson number.
+  const LESSONS = [
     {
+      number: 10,
       title: "Lesson 10 Prayer 2",
       slug: "lesson-10-prayer",
       cover: "lesson-10-prayer/lesson-10-prayer.jpg"
-    },
+    }
+  ];
+
+  // ---- SERMONS ----
+  // Newest sermon goes FIRST in this list (same steps as above, just no
+  // "number" field — sermons aren't numbered).
+  const SERMONS = [
     {
       title: "Equipped for War",
       slug: "equipped-for-war",
@@ -331,19 +344,20 @@
     }
   ];
 
-  const listEl = document.getElementById('episode-list');
-
-  if (EPISODES.length === 0) {
-    listEl.innerHTML = '<p class="empty">No episodes yet — check back soon.</p>';
-  } else {
-    EPISODES.forEach(ep => {
+  function renderList(containerId, items, emptyText) {
+    const listEl = document.getElementById(containerId);
+    if (items.length === 0) {
+      listEl.innerHTML = `<p class="empty">${emptyText}</p>`;
+      return;
+    }
+    items.forEach(item => {
       const a = document.createElement('a');
       a.className = 'ep';
-      a.href = './' + ep.slug + '/';
+      a.href = './' + item.slug + '/';
       a.innerHTML = `
-        <img class="ep-cover" src="${ep.cover}" alt="" loading="lazy">
+        <img class="ep-cover" src="${item.cover}" alt="" loading="lazy">
         <div class="ep-info">
-          <div class="ep-title">${ep.title}</div>
+          <div class="ep-title">${item.title}</div>
           <div class="ep-cta">Listen now</div>
         </div>
         <svg class="ep-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
@@ -351,6 +365,11 @@
       listEl.appendChild(a);
     });
   }
+
+  const sortedLessons = [...LESSONS].sort((a, b) => a.number - b.number);
+
+  renderList('lesson-list', sortedLessons, 'No lessons yet — check back soon.');
+  renderList('sermon-list', SERMONS, 'No sermons yet — check back soon.');
 
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
